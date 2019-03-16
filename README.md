@@ -14,13 +14,13 @@ First the basic requirements:
 1. Masternode Server (VPS – The computer that will be on 24/7).
 1. A unique IP address for your VPS / Remote wallet.
 
-For security reasons, you’re are going to need a different IP for each masternode you plan to host.
+**For security reasons, you’re are going to need a different IP for each masternode you plan to host.**
 
 ## Configuration
 
 Note: The auto zBTK minter should be disabled during this setup to prevent autominting of your masternode collateral. BEFORE unlocking your wallet, you can disable auto-minting in the control wallet option menu.
 
-**Step 1:** Using the control wallet, enter the debug console (Tools > Debug console) and type the following command:
+**Step 1:** Using the control wallet, enter the debug console `Tools > Debug console` and type the following command:
 
 ```
 masternode genkey
@@ -28,13 +28,17 @@ masternode genkey
 
 *(This will be the masternode’s privkey. We’ll use this later…)*
 
-**Step 2:** Using the control wallet still, enter the following command:
+**Step 2:** Using the control wallet, enter the following command:
 
 ```
 getaccountaddress "chooseAnyNameForYourMasternode"
 ```
 
-**Step 3:** Still in the control wallet, send 20,000,000 BTK to the address you generated in step 2. (Be 100% sure that you entered the address correctly. You can verify this when you paste the address into the **“Pay To:”** field, the label will auto populate with the name you chose”, also make sure this is exactly 20,000,000 BTK; No less, no more.)
+**Step 3:** Still in the control wallet, send 20,000,000 BTK to the address you generated in Step 2. 
+
+Be 100% sure that you entered the address correctly. You can verify this when you paste the address into the **"Pay To:"** field, the label will auto populate with the name you chose. 
+
+Also make sure this is exactly **20,000,000 BTK**; No less, no more.
 
 **Be absolutely 100% sure that send to address is copied correctly and then check it again. We cannot help you, if you send 20,000,000 BTK to an incorrect address.**
 
@@ -66,7 +70,7 @@ Example:
 MN1 31.14.135.27:61472 892WPpkqbr7sr6Si4fdsfssjjapuFzAXwETCrpPJubnrmU6aKzh c8f4965ea57a68d0e6dd384324dfd28cfbe0c801015b973e7331db8ce018716999 1
 ```
 
-Substitute it with your own values and without the “<>”s.
+Substitute it with your own values and without the "<>"s.
 
 ## VPS Remote Wallet Install
 
@@ -108,7 +112,7 @@ cd ~/btk/bin
 ./btk-cli stop
 ```
 
-**Step 7:** Now on the masternodes, enter the btk data directory:
+**Step 7:** Navigate to the btk data directory:
 
 ```
 cd ~/.btk
@@ -135,7 +139,7 @@ externalip=Your VPS unique public ip address
 masternodeprivkey=Result of Step 1
 ```
 
-Make sure to replace rpcuser and rpcpassword with your own.
+*Make sure to replace rpcuser and rpcpassword with your own.*
 
 **Step 10:** Save and exit the file:
 
@@ -143,7 +147,7 @@ Make sure to replace rpcuser and rpcpassword with your own.
 Ctr+x to exit and press Y to save changes and press enter to close
 ```
 
-Please be sure to have port 61472 open on your server firewall if applicable for your control wallet to be able start the masternode remotely.
+**Please be sure to have port 61472 open on your server firewall if applicable for your control wallet to be able start the masternode remotely.**
 
 ## Start the Masternode
 
@@ -162,10 +166,10 @@ cd ~/btk/bin
 **Step 3:** From the Control wallet debug console:
 
 ```
-startmasternode alias false <myalias>
+startmasternode alias false myalias
 ```
 
-Where <myalias> is the name of your masternode alias (without brackets)
+Where "myalias" is the name of your masternode alias (without brackets)
 
 **The following should appear.**
 
