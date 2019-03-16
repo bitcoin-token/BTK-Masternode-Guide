@@ -20,18 +20,28 @@ For security reasons, you’re are going to need a different IP for each mastern
 
 Note: The auto zBTK minter should be disabled during this setup to prevent autominting of your masternode collateral. BEFORE unlocking your wallet, you can disable auto-minting in the control wallet option menu.
 
-Step 1: Using the control wallet, enter the debug console (Tools > Debug console) and type the following command:
+**Step 1:** Using the control wallet, enter the debug console (Tools > Debug console) and type the following command:
 
 ```
 masternode genkey (This will be the masternode’s privkey. We’ll use this later…)
 ```
 
-Step 2: Using the control wallet still, enter the following command:
+**Step 2:** Using the control wallet still, enter the following command:
 
 ```
 getaccountaddress chooseAnyNameForYourMasternode
 ```
 
-Step 3: Still in the control wallet, send 20,000,000 BTK to the address you generated in step 2. (Be 100% sure that you entered the address correctly. You can verify this when you paste the address into the **“Pay To:”** field, the label will auto populate with the name you chose”, also make sure this is exactly 20,000,000 BTK; No less, no more.)
+**Step 3:** Still in the control wallet, send 20,000,000 BTK to the address you generated in step 2. (Be 100% sure that you entered the address correctly. You can verify this when you paste the address into the **“Pay To:”** field, the label will auto populate with the name you chose”, also make sure this is exactly 20,000,000 BTK; No less, no more.)
 
+**Be absolutely 100% sure that send to address is copied correctly and then check it again. We cannot help you, if you send 20,000,000 BTK to an incorrect address.**
 
+**Step 4:** Still in the control wallet, enter the command into the console:
+
+```
+masternode outputs
+```
+
+*This gets the proof of transaction of sending 20,000,000 BTK*
+
+**Step 5:** Still on the main computer, go into the BTK data directory:
