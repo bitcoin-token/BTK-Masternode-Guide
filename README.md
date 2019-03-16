@@ -23,13 +23,13 @@ Note: The auto zBTK minter should be disabled during this setup to prevent autom
 **Step 1:** Using the control wallet, enter the debug console (Tools > Debug console) and type the following command:
 
 ```
-masternode genkey (This will be the masternode’s privkey. We’ll use this later…)
+`masternode genkey` (This will be the masternode’s privkey. We’ll use this later…)
 ```
 
 **Step 2:** Using the control wallet still, enter the following command:
 
 ```
-getaccountaddress chooseAnyNameForYourMasternode
+getaccountaddress "chooseAnyNameForYourMasternode"
 ```
 
 **Step 3:** Still in the control wallet, send 20,000,000 BTK to the address you generated in step 2. (Be 100% sure that you entered the address correctly. You can verify this when you paste the address into the **“Pay To:”** field, the label will auto populate with the name you chose”, also make sure this is exactly 20,000,000 BTK; No less, no more.)
