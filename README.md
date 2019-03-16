@@ -53,11 +53,29 @@ macOS | `~/Library/Application\ Support/BTK/`
 Linux | `~/.btk/`
 
 Find masternode.conf and add the following line to it:
-
 ```
 <Name of Masternode(Use the name you entered earlier for simplicity)> <Unique VPS Public IP address>:61472 <The result of Step 1> <Result of Step 4> <The number after the long line in Step 4>
 ```
 
-Example
+Example:
+```
+MN1 31.14.135.27:61472 892WPpkqbr7sr6Si4fdsfssjjapuFzAXwETCrpPJubnrmU6aKzh c8f4965ea57a68d0e6dd384324dfd28cfbe0c801015b973e7331db8ce018716999 1
+```
 
-`MN1 31.14.135.27:61472 892WPpkqbr7sr6Si4fdsfssjjapuFzAXwETCrpPJubnrmU6aKzh c8f4965ea57a68d0e6dd384324dfd28cfbe0c801015b973e7331db8ce018716999 1`
+Substitute it with your own values and without the “<>”s.
+
+## VPS Remote Wallet Install
+
+Install the latest version of the BTK wallet onto your masternode. The latest version can be found here: [BTK Releases](https://github.com/bitcoin-token/Bitcoin-Turbo-Koin-Core/releases).
+
+**Step 1:** Log in to your VPS:
+
+```
+cd ~
+```
+
+**Step 2:** From your home directory, download the latest version from the BTK GitHub repository:
+
+```
+wget https://github.com/bitcoin-token/Bitcoin-Turbo-Koin-Core/releases/download/v1.0.0/btk-x86_64-linux-gnu.tar.gz
+```
