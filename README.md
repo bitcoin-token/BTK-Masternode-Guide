@@ -45,3 +45,13 @@ masternode outputs
 *This gets the proof of transaction of sending 20,000,000 BTK*
 
 **Step 5:** Still on the main computer, go into the BTK data directory:
+
+Windows | %Appdata%/BTK/
+macOS | ~/Library/Application\ Support/BTK/
+Linux | ~/.btk/
+
+Find masternode.conf and add the following line to it:
+
+```
+<Name of Masternode(Use the name you entered earlier for simplicity)> <Unique VPS Public IP address>:41472 <The result of Step 1> <Result of Step 4> <The number after the long line in Step 4>
+```
