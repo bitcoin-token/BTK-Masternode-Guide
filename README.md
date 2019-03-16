@@ -79,3 +79,100 @@ cd ~
 ```
 wget https://github.com/bitcoin-token/Bitcoin-Turbo-Koin-Core/releases/download/v1.0.0/btk-x86_64-linux-gnu.tar.gz
 ```
+
+**Step 3:** Unzip & Extract:
+
+```
+tar -zxvf btk-x86_64-linux-gnu.tar.gz
+```
+
+**Step 4:** Go to your BTK bin directory:
+
+```
+cd ~/btk/bin
+```
+
+**Step 5:** Note: If this is the first time running the wallet in the VPS, you’ll need to attempt to start the wallet:
+
+```
+./btkd --daemon
+```
+
+**Step 6:** Stop the daemon after the blockchain downloads:
+
+```
+./btk-cli stop
+```
+
+**Step 7:** Now on the masternodes, enter the btk data directory:
+
+```
+cd ~/.btk
+```
+
+**Step 8:** Open the configuration file by typing:
+
+```
+nano btk.conf
+```
+
+**Step 9:** Make the config look like this:
+
+```
+rpcuser=long_random_username
+rpcpassword=longer_random_password
+rpcallowip=127.0.0.1
+server=1
+daemon=1
+logtimestamps=1
+maxconnections=256
+masternode=1
+externalip=Your VPS unique public ip address
+masternodeprivkey=Result of Step 1
+```
+
+Make sure to replace rpcuser and rpcpassword with your own.
+
+**Step 10:** Save and exit the file:
+
+```
+Ctr+x to exit and press Y to save changes and press enter to close
+```
+
+Please be sure to have port 61472 open on your server firewall if applicable for your control wallet to be able start the masternode remotely.
+
+## Start the Masternode
+
+**Step 1:** Now, you need to finally start these things in this order:
+
+```
+cd ~/btk/bin
+```
+
+**Step 2:** Start the wallet:
+
+```
+./btkd
+```
+
+**Step 3:** From the Control wallet debug console:
+
+```
+startmasternode alias false <myalias>
+```
+
+Where <myalias> is the name of your masternode alias (without brackets)
+
+**The following should appear.**
+
+```
+"overall" : "Successfully started 1 masternodes, failed to start 0, total 1",
+"detail" : [
+  {
+    "alias" : "<myalias>",
+    "result" : "successful",
+    "error" : ""
+  }
+]
+```
+
