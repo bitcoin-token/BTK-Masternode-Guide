@@ -9,3 +9,6 @@ You will need your server details for progressing through this guide including t
 
 First the basic requirements:
 
+1. 20,000,000 BTK
+1. A main computer (your everyday computer) – This will run the control wallet, hold your collateral 20,000,000 BTK and can be turned on and off without affecting the masternode.
+
