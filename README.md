@@ -58,6 +58,6 @@ Find masternode.conf and add the following line to it:
 <Name of Masternode(Use the name you entered earlier for simplicity)> <Unique VPS Public IP address>:61472 <The result of Step 1> <Result of Step 4> <The number after the long line in Step 4>
 ```
 
-```
-Example: MN1 31.14.135.27:61472 892WPpkqbr7sr6Si4fdsfssjjapuFzAXwETCrpPJubnrmU6aKzh c8f4965ea57a68d0e6dd384324dfd28cfbe0c801015b973e7331db8ce018716999 1
-```
+Example
+
+`MN1 31.14.135.27:61472 892WPpkqbr7sr6Si4fdsfssjjapuFzAXwETCrpPJubnrmU6aKzh c8f4965ea57a68d0e6dd384324dfd28cfbe0c801015b973e7331db8ce018716999 1`
