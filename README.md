@@ -53,11 +53,13 @@ macOS | `~/Library/Application\ Support/BTK/`
 Linux | `~/.btk/`
 
 Find masternode.conf and add the following line to it:
+
 ```
 <Name of Masternode(Use the name you entered earlier for simplicity)> <Unique VPS Public IP address>:61472 <The result of Step 1> <Result of Step 4> <The number after the long line in Step 4>
 ```
 
 Example:
+
 ```
 MN1 31.14.135.27:61472 892WPpkqbr7sr6Si4fdsfssjjapuFzAXwETCrpPJubnrmU6aKzh c8f4965ea57a68d0e6dd384324dfd28cfbe0c801015b973e7331db8ce018716999 1
 ```
@@ -176,3 +178,29 @@ Where <myalias> is the name of your masternode alias (without brackets)
 ]
 ```
 
+**Step 4:** Back in the VPS (remote wallet), start the masternode:
+
+```
+./btk-cli startmasternode local false
+```
+
+**Step 5:** Use the following command to check status:
+
+```
+./btk-cli masternode status
+```
+
+You should see something like:
+
+```
+{
+  "txhash": "c2f85b71a04d111a1ca337fbc3aed1168856e3365b4e846ac9b89a9908c15b1d",
+  "outputidx": 1,
+  "netaddr": "95.179.182.255:61472",
+  "addr": "BTSAZ8JbaDDHTEKnMLd3exqv7n8VBKs9i7",
+  "status": 4,
+  "message": "Masternode successfully started"
+}
+```
+
+Masternode Setup is Complete!
