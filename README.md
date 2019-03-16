@@ -46,6 +46,8 @@ masternode outputs
 
 **Step 5:** Still on the main computer, go into the BTK data directory:
 
+OS | Path to BTK
+------------ | -------------
 Windows | %Appdata%/BTK/
 macOS | ~/Library/Application\ Support/BTK/
 Linux | ~/.btk/
