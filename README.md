@@ -210,3 +210,10 @@ You should see something like:
 ```
 
 Masternode Setup is Complete!
+
+## Tearing down a Masternode
+
+1. `./btk-cli stop` from the masternode to stop the wallet.
+1. Then from your controller wallet, edit your masternode.conf, delete the MN1 masternode line entry.
+1. Restart the controller wallet.
+1. Your 20,000,000 BTK will now be unlocked.
